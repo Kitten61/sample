@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_uploads"
+    app:startDestination="@id/uploadsFragment">
+
+    <fragment
+        android:id="@+id/uploadsFragment"
+        android:name="ru.webant.app.ui.uploads.UploadsFragment"
+        android:label="@string/nav_uploads" />
+</navigation>

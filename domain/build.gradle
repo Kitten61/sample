@@ -1,0 +1,17 @@
+plugins {
+    id 'java-library'
+    id 'kotlin'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+dependencies {
+    // Rx
+    implementation "io.reactivex.rxjava2:rxkotlin:$rxKotlinVersion"
+
+    // https://github.com/square/okhttp
+    implementation "com.squareup.okhttp3:logging-interceptor:$okHttp3Version"
+}

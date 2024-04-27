@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">App</string>
+    <string name="schedule">Расписание</string>
+    <string name="add_discipline">Добавить дисциплину</string>
+    <string name="add_item">Добавить предмет</string>
+    <string name="add">Добавить</string>
+    <string name="name">Название</string>
+    <string name="complete">Завершить</string>
+    <string name="plus">+</string>
+    <string name="monday">Понедельник</string>
+    <string name="tuesday">Вторник</string>
+    <string name="wednesday">Среда</string>
+    <string name="thursday">Четверг</string>
+    <string name="friday">Пятница</string>
+    <string name="saturday">Суббота</string>
+    <string name="number">%d. </string>
+    <string name="minus">-</string>
+    <string name="items_tomorrow">Предметы на завтра</string>
+    <string name="items">Предметы</string>
+    <string name="nav_cats">Котики</string>
+    <string name="nav_favorites">Избранное</string>
+    <string name="nav_uploads">Загрузки</string>
+    <string name="desc">DESC</string>
+    <string name="asc">ASC</string>
+    <string name="random">RANDOM</string>
+    <string name="delete">Удалить</string>
+    <string name="cancel">Отменить</string>
+</resources>

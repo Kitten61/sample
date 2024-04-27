@@ -1,0 +1,100 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'realm-android'
+    id 'androidx.navigation.safeargs'
+}
+
+android {
+    compileSdk versions.compileSdk
+
+    defaultConfig {
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+        versionCode versions.versionCode
+        versionName versions.releaseVersionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "API_KEY", "\"53ad5bb0-c8b1-40f1-8893-b60681432112\"")
+        }
+        debug {
+            buildConfigField("String", "API_KEY", "\"53ad5bb0-c8b1-40f1-8893-b60681432112\"")
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+}
+
+dependencies {
+    implementation project(":gateway")
+    implementation project(":domain")
+    implementation project(":usecase")
+
+    implementation "androidx.core:core-ktx:$ktxCoreVersion"
+    implementation "androidx.appcompat:appcompat:$appCompatVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
+    implementation "androidx.recyclerview:recyclerview:$recyclerViewVersion"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:$swipeRefreshLayoutVersion"
+    implementation "com.google.android.material:material:$materialVersion"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$ktxCoreVersion"
+
+    // Timber
+    implementation "com.jakewharton.timber:timber:$timberVersion"
+
+    // Glide
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+
+    // NavGraph
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigationGraphVersion"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigationGraphVersion"
+
+    // OkHttp
+    implementation "com.squareup.okhttp3:logging-interceptor:$okHttp3Version"
+
+    // Hilt
+    implementation "com.google.dagger:hilt-android:$hiltVersion"
+    implementation 'com.google.firebase:firebase-crashlytics-buildtools:2.7.1'
+    kapt "com.google.dagger:hilt-compiler:$hiltVersion"
+
+    // Mavericks
+    implementation "com.airbnb.android:mavericks:$mavericksVersion"
+
+    // Chuck
+    debugImplementation "com.readystatesoftware.chuck:library:$chuckVersion"
+    releaseImplementation "com.readystatesoftware.chuck:library-no-op:$chuckVersion"
+
+    // Moshi
+    implementation "com.squareup.moshi:moshi:$moshiVersion"
+    implementation "com.squareup.moshi:moshi-adapters:$moshiVersion"
+    kapt "com.squareup.moshi:moshi-kotlin-codegen:$moshiVersion"
+
+    // Retrofit
+    implementation "com.squareup.retrofit2:converter-moshi:$moshiConverterVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$rxJavaConverterVersion"
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+
+    // Rx
+    implementation "io.reactivex.rxjava2:rxkotlin:$rxKotlinVersion"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
+    implementation "com.jakewharton.rxrelay2:rxrelay:$rxRelayVersion"
+
+    implementation "commons-io:commons-io:$ioUtilsVersion"
+}

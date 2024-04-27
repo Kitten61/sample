@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item android:id="@+id/nav_cats"
+            android:icon="@android:drawable/ic_menu_camera"
+            android:title="@string/nav_cats"/>
+        <item android:id="@+id/nav_favorites"
+            android:icon="@android:drawable/ic_menu_camera"
+            android:title="@string/nav_favorites"/>
+        <item android:id="@+id/nav_uploads"
+            android:icon="@android:drawable/ic_menu_camera"
+            android:title="@string/nav_uploads"/>
+    </group>
+</menu>

@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>FinalNewline:ru.webant.freetickets.ExampleUnitTest.kt:1</ID>
+    <ID>FinalNewline:ru.webant.freetickets.MainActivity.kt:1</ID>
+    <ID>NewLineAtEndOfFile:ExampleUnitTest.kt$ru.webant.freetickets.ExampleUnitTest.kt</ID>
+    <ID>NewLineAtEndOfFile:MainActivity.kt$ru.webant.freetickets.MainActivity.kt</ID>
+    <ID>NoWildcardImports:ru.webant.freetickets.ExampleUnitTest.kt:5</ID>
+  </CurrentIssues>
+</SmellBaseline>
